@@ -11,53 +11,73 @@
 
 <body class="dark-theme">
     <header>
-
+        <div class="container header-content">
+            <div class="logo"><img src="./assets/images/main-logo.svg" alt="logo"></div>
+            <div class="nav-links">
+                <a href="#" class="nav-link">Intro</a>
+                <a href="#" class="nav-link">Skills</a>
+            </div>
+        </div>
     </header>
     <main>
         <section class="intro-section">
             <div class="container intro-content">
-                <div class="profile-image"></div>
+                <div class="intro-profile-image"></div>
                 <div class="intro-message">
-                    <div class="content">
-                        <h2>Hi there, This is Shashi Kumar D M.</h6>
-                            <p>Engineering graduate form Acharys Instite of Technology, Passionate towords frontend
-                                developmnt with project experiance, aiming to be a amazing fullstack developer and
-                                much
-                                more...</p>
-                            <p>Please read through some stuff below for more info <span class="emoji">&#128522;</span>
-                            </p>
-                    </div>
+                    <h2>Hi there, This is <span class="no-wrap">Shashi Kumar D M.</span></h6>
+                        <p>Engineering graduate form Acharys Instite of Technology, Passionate towords frontend
+                            developmnt with project experiance, aiming to be a amazing fullstack developer and
+                            much
+                            more...</p>
+                        <p>Please read through some stuff below for more info <span class="emoji">&#128522;</span>
+                        </p>
                 </div>
             </div>
         </section>
-        <section class="bg-section skills">
-            <div class="section-content">
-                <div class="container">
-                    <h2 class="section-header">Skills</h2>
-                    <div class="skills-list-wrapper">
-                        <!-- <div class="center-border"></div> -->
-                        <div class="skills-wrapper technical-skills">
-                            <h3 class="skill-header">Technical</h3>
-                            <ul class="skills-list">
-                                <li>React</li>
-                                <li>Angular</li>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>Java Script</li>
-                                <li>Java</li>
-                            </ul>
-                        </div>
-                        <div class="skills-wrapper non-technical-skills">
-                            <h3 class="skill-header">Non Technical</h3>
-                            <ul class="skills-list">
-                                <li>Designing</li>
-                                <li>Photography</li>
-                                <li>Problem solving</li>
-                            </ul>
-                        </div>
-                    </div>
+        <section class="technologies-known container">
+            <h3 class="section-header">Known technologies</h3>
+
+            <div class="tech-row">
+                <div class="tech-info">
+                    <h4 class="tech-name">React</h4>
+                    <p class="tech-message">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum accusamus, obcaecati voluptate recusandae optio provident, rerum iure officia explicabo architecto neque laborum quas aliquam facere saepe reiciendis amet facilis excepturi itaque qui, minima similique temporibus sequi quos. Iusto harum perferendis quos quia culpa quis eligendi labore hic. Temporibus, doloremque reprehenderit!
+                    </p>
+                </div>
+                <div class="tech-icon">
+                    <img src="./assets/images/react-logo.svg" alt="react-logo">
                 </div>
             </div>
+
+            <div class="tech-row">
+                <div class="tech-info">
+                    <h4 class="tech-name">Angular</h4>
+                    <p class="tech-message">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum accusamus, obcaecati voluptate recusandae optio provident, rerum iure officia explicabo architecto neque laborum quas aliquam facere saepe reiciendis amet facilis excepturi itaque qui, minima similique temporibus sequi quos. Iusto harum perferendis quos quia culpa quis eligendi labore hic. Temporibus, doloremque reprehenderit!
+                    </p>
+                </div>
+                <div class="tech-icon">
+                    <img src="./assets/images/angular-logo.svg" alt="angular-logo">
+                </div>
+            </div>
+
+            <div class="tech-row">
+                <div class="tech-info">
+                    <h4 class="tech-name">Spring boot</h4>
+                    <p class="tech-message">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum accusamus, obcaecati voluptate recusandae optio provident, rerum iure officia explicabo architecto neque laborum quas aliquam facere saepe reiciendis amet facilis excepturi itaque qui, minima similique temporibus sequi quos. Iusto harum perferendis quos quia culpa quis eligendi labore hic. Temporibus, doloremque reprehenderit!
+                    </p>
+                </div>
+                <div class="tech-icon">
+                    <img src="./assets/images/sprint-boot-logo.svg" alt="angular-logo">
+                </div>
+            </div>
+
+            <label for="toggle-view-all-tech" class="toggle-button">
+                <input type="checkbox" class="toggle-view-all-tech" id="toggle-view-all-tech">
+                <span>Show All</span>
+            </label>
+
         </section>
     </main>
 </body>
