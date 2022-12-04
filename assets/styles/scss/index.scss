@@ -27,7 +27,7 @@ body.dark-theme {
     --header-bg: var(--color-light);
     --header-link-color: #212121;
     --intro-bg: var(--color-light);
-    --color-hamburger: var(--color-dark)
+    --color-hamburger: var(--color-dark);
 }
 
 body {
@@ -62,6 +62,55 @@ footer {
         .coprights-icon {
             font-size: 1.2em;
             padding-right: 0.2em;
+        }
+    }
+}
+
+.hamburger {
+    width: 2.5em;
+    height: 2.5em;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    .hamburger-label {
+        display: block;
+        position: relative;
+
+        &,
+        &::after,
+        &::before {
+            width: 2em;
+            height: 3px;
+            background-color: var(--color-hamburger);
+            transform-origin: center;
+            transition: all 200ms ease-in-out;
+        }
+
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+        }
+        &::before {
+            bottom: 0.5em;
+        }
+        &::after {
+            top: 0.5em;
+        }
+    }
+}
+
+@mixin hamburger-cross {
+    .hamburger .hamburger-label {
+        transform: rotate(45deg);
+
+        &::before {
+            opacity: 0;
+        }
+        &::after {
+            transform: rotate(90deg) translate(-0.5em);
         }
     }
 }
@@ -139,42 +188,9 @@ header {
 
             .hamburger {
                 position: absolute;
-                right: 100%;
-                width: 2.5em;
-                height: 2.5em;
                 display: flex;
-                justify-content: center;
-                align-items: center;
+                right: calc(100% + 1em);
                 top: 20px;
-
-                .hamburger-label {
-                    display: block;
-                    position: relative;
-
-                    &,
-                    &::after,
-                    &::before {
-                        width: 2em;
-                        height: 3px;
-                        background-color: var(--color-hamburger);
-                        transform-origin: center;
-                        transition: all 200ms ease-in-out;
-                    }
-
-                    &::after,
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        left: 0;
-                    }
-                    &::before {
-                        bottom: .5em;
-                    }
-                    &::after {
-                        top: .5em;
-                    }
-                }
-
             }
 
             #hamburger-input {
@@ -194,17 +210,8 @@ header {
                     transform: translateX(50%);
                     --color-hamburger: var(--color-light);
                 }
-
-                .hamburger .hamburger-label {
-                    transform: rotate(45deg);
-
-                    &::before  {
-                        opacity: 0;
-                    }
-                    &::after  {
-                        transform: rotate(90deg) translate(-.5em);
-                    }
-                }
+            
+                @include hamburger-cross();
             }
 
             .nav-link {
