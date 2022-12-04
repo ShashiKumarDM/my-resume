@@ -13,6 +13,7 @@
     --section-padding: 2em;
     --tech-icon-size: 150px;
     --work-icon-size: 250px;
+    --hamber-size: 2.5em;
 }
 
 $tech-row-break-point: 700px;
@@ -28,6 +29,10 @@ body.dark-theme {
     --header-link-color: #212121;
     --intro-bg: var(--color-light);
     --color-hamburger: var(--color-dark);
+}
+
+html, body {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -67,11 +72,27 @@ footer {
 }
 
 .hamburger {
-    width: 2.5em;
-    height: 2.5em;
-    display: none;
+    width: var(--hamber-size);
+    height: var(--hamber-size);
+    display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 6;
+    right: unset;
+
+    @media screen and (min-width: ($nav-link-breakpoint)) {
+        display: none;
+    }
+
+    #hamburger-input {
+        appearance: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
 
     .hamburger-label {
         display: block;
@@ -100,17 +121,21 @@ footer {
             top: 0.5em;
         }
     }
-}
 
-@mixin hamburger-cross {
-    .hamburger .hamburger-label {
-        transform: rotate(45deg);
-
-        &::before {
-            opacity: 0;
-        }
-        &::after {
-            transform: rotate(90deg) translate(-0.5em);
+    &:has(#hamburger-input:checked) {
+        --color-hamburger: var(--color-light);
+        position: fixed;
+        right: var(--hamber-size);
+        transform: translateX(50%);
+        
+        .hamburger-label {
+            transform: rotate(45deg);
+            &::before {
+                opacity: 0;
+            }
+            &::after {
+                transform: rotate(90deg) translate(-0.5em);
+            }
         }
     }
 }
@@ -155,6 +180,12 @@ header {
         height: var(--header-logo-width);
     }
 
+    &:has(#hamburger-input:checked) {
+        .nav-links {
+            right: 0;
+        }
+    }
+
     .nav-links {
         display: flex;
         column-gap: 1em;
@@ -186,33 +217,12 @@ header {
             transition: all 100ms ease-in-out;
             padding-top: 84px;
 
-            .hamburger {
-                position: absolute;
-                display: flex;
-                right: calc(100% + 1em);
-                top: 20px;
-            }
-
-            #hamburger-input {
-                appearance: none;
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-            }
-
-            &:has(#hamburger-input:checked) {
-                right: 0;
-
-                .hamburger {
-                    right: 50%;
-                    transform: translateX(50%);
-                    --color-hamburger: var(--color-light);
-                }
-            
-                @include hamburger-cross();
-            }
+            // .hamburger {
+            //     position: absolute;
+            //     display: flex;
+            //     right: calc(100% + 1em);
+            //     top: 20px;
+            // }
 
             .nav-link {
                 color: var(--color-light);

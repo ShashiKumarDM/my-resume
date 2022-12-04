@@ -13,20 +13,21 @@
     <header>
         <div class="container header-content">
             <div class="logo"><img src="./assets/images/main-logo.svg" alt="logo"></div>
+            <div class="hamburger">
+                <label for="hamburger" class="hamburger-label">
+                </label>
+                <input type="checkbox" name="hamburger" id="hamburger-input">
+            </div>
             <div class="nav-links active">
-                <div class="hamburger">
-                    <label for="hamburger" class="hamburger-label">
-                    </label>
-                    <input type="checkbox" name="hamburger" id="hamburger-input">
-                </div>
-                <a href="#" class="nav-link">Intro</a>
-                <a href="#" class="nav-link">Skills</a>
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#tech-known" class="nav-link">Technologies Known</a>
+                <a href="#work-info" class="nav-link">Work Information</a>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="intro-section">
+        <section class="intro-section" id="home">
             <div class="container intro-content">
                 <div class="intro-profile-image"></div>
                 <div class="intro-message">
@@ -40,7 +41,7 @@
                 </div>
             </div>
         </section>
-        <section class="technologies-known">
+        <section class="technologies-known" id="tech-known">
             <div class="container">
                 <h3 class="section-header">Known technologies</h3>
 
@@ -105,7 +106,7 @@
 
             </div>
         </section>
-        <section class="work-information">
+        <section class="work-information" id="work-info">
             <div class="container">
                 <h3 class="section-header">Work Experiance</h3>
 
