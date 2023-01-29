@@ -1,0 +1,27 @@
+:root {
+    --profile-image: url("../../images/profile-image.jpeg");
+    --bg-1: url("../../images/bg1.jpg");
+    --profile-image-size: 250px;
+    --height-intro-curve: 2em;
+    --header-logo-width: 50px;
+    --section-padding: 2em;
+    --tech-icon-size: 150px;
+    --work-icon-size: 250px;
+    --hamber-size: 2.5em;
+    --header-height: 84px;
+}
+
+$tech-row-break-point: 700px;
+$nav-link-breakpoint: 750px;
+
+body.dark-theme {
+    --color-dark: #212121;
+    --color-dark-low-opacity: #212121a0;
+    --color-light: #fff;
+    --color-light-low-opacity: #ffffff50;
+    --color-dark-lite-border: #21212120;
+    --header-bg: var(--color-light);
+    --header-link-color: #212121;
+    --intro-bg: var(--color-light);
+    --color-hamburger: var(--color-dark);
+}

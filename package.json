@@ -1,0 +1,21 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run-sass": "sass ./assets/styles/scss:./assets/styles/css --watch --no-source-map --style=compressed",
+    "start": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@private.github.com:ShashiKumarDM/my-resume.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-serve": "^1.0.1",
+    "sass": "^1.57.1"
+  }
+}
